@@ -3,7 +3,7 @@
 ## Movefiles.js
 
 In Google Drive, 25,000+ of my photos files were "automatically" dumped from their various original locations to my root My Drive for an unknown reason.
-This caused navigation/scrolling to be very tedious, with the folder constantly loading - on web, the page would have to repeatedly reload the next batch of files as I scrolled. Finding legitimate files within the folder was not sustainable.
+This caused navigation/scrolling to be very tedious, with the folder constantly loading (on web), the page would have to repeatedly reload the next batch of files as I scrolled. Finding specific files within the folder was not sustainable.
 
 Issue discussed by others here:
 https://support.google.com/drive/thread/87658395/an-item-was-automatically-placed-in-without-my-permission?hl=en
