@@ -2,13 +2,13 @@
 
 ## Movefiles.js
 
-In Google Drive, 25,000+ of my photos files were "automatically" dumped from their various original locations to my root My Drive for an unknown reason.
+In Google Drive made a change to their architecture that caused 26,000+ of my photo files to be consolidated from their various original locations to my root My Drive.
 This caused navigation/scrolling to be very tedious with the folder constantly loading (on web). The page would have to repeatedly reload the next batch of files as I scrolled down. Finding specific files within the folder was not sustainable.
 
 Issue discussed by others here:
 https://support.google.com/drive/thread/87658395/an-item-was-automatically-placed-in-without-my-permission?hl=en
 
-GOAL: 
+REQUIREMENTS: 
 -	Move the files to a different folder, divided in subfolders for easy future navigation.
 -	Most of the 26,000+ files were grandfathered in with Google’s unlimited photo storage at reduced quality. Moving the files should not increase storage usage.
 
