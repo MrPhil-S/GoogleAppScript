@@ -1,24 +1,25 @@
-# GoogleAppScript
+# Google Drive File Organizer
 
-## Movefiles.js
+## Overview
 
-In Google Drive made a change to their architecture that caused 26,000+ of my photo files to be consolidated from their various original locations to my root My Drive.
-This caused navigation/scrolling to be very tedious with the folder constantly loading (on web). The page would have to repeatedly reload the next batch of files as I scrolled down. Finding specific files within the folder was not sustainable.
+A change in Google Drive's architecture caused 26,000+ of my photo files to be consolidated into my root "My Drive" folder. This made navigation extremely difficult, as Google Drive continuously reloaded files when scrolling down the web interface. Finding specific files became unsustainable.
 
-Issue discussed by others here:
-https://support.google.com/drive/thread/87658395/an-item-was-automatically-placed-in-without-my-permission?hl=en
+Issue discussed by others: [Google Support Thread](https://support.google.com/drive/thread/87658395/an-item-was-automatically-placed-in-without-my-permission?hl=en)
 
-REQUIREMENTS: 
--	Move the files to a different folder, divided in subfolders for easy future navigation.
--	Most of the 26,000+ files were grandfathered in with Google’s unlimited photo storage at reduced quality. Moving the files should not increase storage usage.
+## Requirements
 
-SOLUTION:
+- Move files to a different folder, organized into subfolders for easier navigation.
+- Ensure that moving the files does not increase storage usage, particularly for photos stored under Google's grandfathered unlimited storage policy.
 
-The script moves all files matching a specific set of file types (images) to a folder matching the file's create date YYYY. 
-All moved files are logged in a Google Sheet for tracking/troublshooting the process, logging destination folders and future nerdy pivot table metrics.
-To get around Google App Script quotas (https://developers.google.com/apps-script/guides/services/quotas) and the max 6-minute processing time, 
-I originally determined the estimted amount of files that could be processed within that time and set a max file count that should be processed each time the script was ran.
-Time-driven triggers were used to re-run the script. I later reduced the file count to ensure proecessing time would not exceed 5 minutes since this was the greatest interval that was less than the max 6 quota.
+## Solution
 
+- The script moves all files matching a specific set of image file types to a folder corresponding to the file's creation year (YYYY).
+- All moved files are logged in a Google Sheet for tracking, troubleshooting, and future analysis.
+- To comply with Google Apps Script quotas ([Google Quotas](https://developers.google.com/apps-script/guides/services/quotas)) and the 6-minute execution limit, the script initially estimated the number of files that could be processed in one run.
+- A maximum file count per execution was set, and time-driven triggers were used to repeatedly run the script.
+- The file count was later reduced to ensure processing remained under 5 minutes, optimizing for the most efficient interval within the quota constraints.
 
-Google Apps Script: https://script.google.com/home
+## Implementation
+
+The script is written in Google Apps Script and can be accessed and modified here: [Google Apps Script](https://script.google.com/home)
+
